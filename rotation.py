@@ -1,0 +1,12 @@
+import cv2
+img=cv2.imread('len.jpg')
+resize=cv2.resize(img,(500,500))
+cv2.imshow('original',resize)
+flip=cv2.flip(resize,1)
+cv2.imshow('Horizontal Flip',flip)
+flip=cv2.flip(resize,0)
+cv2.imshow('Vertical Flip',flip)
+flip=cv2.flip(resize,-1)
+cv2.imshow('Both Flip',flip)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
